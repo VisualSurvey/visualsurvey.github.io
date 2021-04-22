@@ -212,6 +212,11 @@ function loadImages(){
       $(".main_display").hide();
       $(cartographicMapArr).show(); 
     }
+   else if(text === 'map'.toLowerCase()){
+      $(".main_display").hide();
+      $(otherMapArr).show(); 
+      $(cartographicMapArr).show(); 
+    }
     else if(scatterPattern.test(text.toLowerCase())){
       $(".main_display").hide();
       $(scatterPlotArr).show(); 
