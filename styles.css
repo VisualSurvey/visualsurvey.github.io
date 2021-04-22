@@ -38,18 +38,6 @@ p{
   box-sizing: border-box;
 }
 
-.box {
-  float: left;
-  width: 25%;
-  padding: 5px;
-  border: 1px solid black;
-  border-style: solid;
-  border-width: thin;
-  border-radius: 5px;
-  border-color:	#8b9dc3;
-  height:590px;
-  display: block;
-}
 
 .clearfix::after {
   content: "";
@@ -78,10 +66,24 @@ hr.line_style{
 }
 .display{
   padding-left: 20px;
-  overflow-y: scroll;
   overflow-x: hidden;
-  height:580px;
+  height:570px;
   
+}
+
+/*styles applied for the box on the left which contains search box,buttons, count*/
+.box {
+  float: left;
+  padding: 5px;
+  border: 1px solid black;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  border-color:	#8b9dc3;
+   display: block;
+  width: fit-content;
+  height: fit-content;
+  block-size: fit-content
 }
 
 img.main_display {
@@ -91,7 +93,7 @@ img.main_display {
       -webkit-box-shadow: 10px 10px 5px #ccc;
       -khtml-box-shadow: 10px 10px 5px #ccc;
  cursor:pointer;
- padding: 10px 3px 3px 3px;
+ padding: 10px 5px 5px 5px;
  image-rendering: pixelated;
  width:13%;
  height:25%;
@@ -105,7 +107,7 @@ img:hover {
 #filters {
   width: 330px;
   height: 265px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
  
 }
@@ -205,18 +207,6 @@ img:hover {
   border: 2px solid #3b5998;
   width:"210px";
   height:"210px";
-}
-
-/* Tablet Landscape */
-@media screen and (max-width: 1060px) {
-  #primary { width:67%; }
-  #secondary { width:30%; margin-left:3%;}  
-}
-
-/* Tabled Portrait */
-@media screen and (max-width: 768px) {
-  #primary { width:100%; }
-  #secondary { width:100%; margin:0; border:none; }
 }
 
 
