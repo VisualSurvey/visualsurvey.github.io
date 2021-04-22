@@ -238,7 +238,7 @@ function loadImages(){
       
   // ++keystroke;
   
-     let searchArray = ['other','otherMap','Cartographic','cartographicMap','scatter','ScatterPlot', 'Circular','CircularChart','chart','time','timecurve','timeline','timetable','timecircle','timeframe','color','position','orientation','text','interaction','layers','layer','animation','seperate','visual','rectangular','polar','parallel','2d','two','3d','three','4d','four','singleView','single','multipleView','multiView','multiple','multi'].map(v => v.toLowerCase());
+     //let searchArray = ['other','otherMap','Cartographic','cartographicMap','scatter','ScatterPlot', 'Circular','CircularChart','chart','time','timecurve','timeline','timetable','timecircle','timeframe','color','position','orientation','text','interaction','layers','layer','animation','seperate','visual','rectangular','polar','parallel','2d','two','3d','three','4d','four','singleView','single','multipleView','multiView','multiple','multi'].map(v => v.toLowerCase());
   
      /*
       Regular expressions are used for pattern matching of text
@@ -372,89 +372,25 @@ function loadImages(){
       $(".main_display").show();
      } 
    
-    // else if(!(searchArray.includes(text))){
-   
-    //   setTimeout(function() {
-    //     $(".main_display").hide();
-    //   },3000)    
-    // }
     ($('#count').html( $('.main_display:visible').length));
-  
-    // console.log($('#count').html( $('.main_display:visible').length));
-    // let authSearch = [];
-    // let authorMap = new Map();
-    // authorMap.set("tominski",["#myImg1","#myImg29","#myImg91","#myImg96"]);
-    // authorMap.set("andrienko",["25.PNG","37.PNG"]);
-    // for(let item of authorMap.keys()){
-    //   if(authorMap.has(text)){
-    //     authSearch = authorMap.get(text);
-    //     $('.main_display').hide();
-    //     console.log(authSearch)
-    //     $(authSearch).show();
-    //   }
-    // }
+
     
   }
-    
-   
   
-
  function keywordModal(){
-  alert('Other/Othermap \n Cartographic/Cartographicmap \n Scatter/Scatterplot \n Circular/Circularchart \n Timeline \n Timecurve \n Timetable \n Timeframe \n Timecircle \n Color \n position \n orientation \n text \n Interaction \n Layers \n Animation \n Seperate \n visual \n Rectangular \n polar \n parallel \n 2d/two \n 3d/three \n 4d/four \n single/singleview \n multi/multiple');
+  alert(' Spatial, Temporal, SpatioTemporal, visualization \n Othermap \n Cartographicmap \n Scatterplot \n Circularchart \n Timeline, Timecurve, Timetable, Timeframe, Timecircle \n Color \n position \n orientation \n text \n Interaction \n Layers \n Animation \n Seperate \n visual \n Rectangular, polar, parallel \n 2d,3d,4d \n singleview \n multipleview');
  }
 
  function searchClear(){
 
   $("#clearText").load(location.href + " #clearText");
-  //  document.getElementById('mySearchText').value = '';
-
   document.getElementById('mySearchText').value = '';
   let text = document.getElementById('mySearchText').value;
-  
-  let array = []
-  let filterArray = [];
-  let checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
-  
-  // for(let item of checkboxes){
-  //   array.push(item);
-  // }
-  // let selectedValueSet = new Set();
-  // for(let item of array) {
-  //   selectedValueSet.add(item);
-    
-  // }
+   let checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
   if(text === '' && checkboxes.length === 0){
     $('.main_display').show();
     $('#count').html( $('.main_display:visible').length);
   }
-
-
-  // if(text === '' && checkboxes.length !== 0){
-  //   $('.main_display').hide();
-  //   //document.getElementById('count').innerHTML = 124;
-  //   for(let item of selectedValueSet.keys()){
-  //     if(mp.has(item)){
-  //       filterArray = mp.get(item);
-  //       $(filterArray).show();
-  //       $('#count').html( $('.main_display:visible').length);
-  //     }
-  //   }
-  // }
-
-//   for (let item of selectedValueSet.keys()){
-//     var selectKey = item;
-//     if(mp.has(selectKey)){
-//     finalArray = mp.get(setKey);
-//     $(finalArray).show();
-//    // console.log(finalArray)
-//    ($('#count').html( $('.main_display:visible').length));
-     
-// }    
-// }
-
-
-  
-   // $('#count').html( $('.main_display:visible').length);
 }
 
  
